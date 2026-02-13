@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Will’s Toy Shop</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+<header class="header">
+  <div class="container header__inner">
+    <a class="brand" href="/"><span class="brand__mark"></span>Will’s Toy Shop</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="/" aria-current="page">Home</a>
+      <a href="/shop">Shop</a>
+      <a href="/shipping.html">Shipping</a>
+      <a href="/store.html">Store</a>
+      <a href="/admin">Admin</a>
+    </nav>
+    <div class="actions">
+      <button class="btn" id="themeToggle" type="button"><span id="themeLabel">Light</span></button>
+      <button class="btn" data-open-cart id="openCart" type="button">Cart <span class="pill" id="cartCount">0</span></button>
+    </div>
+  </div>
+</header>
+<!-- Cart drawer -->
+<div class="drawerBackdrop" id="drawerBackdrop"></div>
+<aside class="cartDrawer" id="cartDrawer" aria-label="Cart drawer">
+  <div class="drawerHead">
+    <h3>Your cart</h3>
+    <button class="x" id="drawerClose" aria-label="Close">×</button>
+  </div>
+  <div class="drawerBody" id="drawerBody"></div>
+  <div class="drawerFoot">
+    <div class="miniRow"><span>Subtotal</span><span id="drawerSubtotal">£0.00</span></div>
+    <a class="btn btn--primary" href="/cart">Go to cart</a>
+    <a class="btn" href="/shop">Continue shopping</a>
+  </div>
+</aside>
+<!-- Quick view modal -->
+<div class="modalBackdrop" id="modalBackdrop"></div>
+<div class="modal" id="quickModal" role="dialog" aria-modal="true" aria-label="Quick view">
+  <div class="modalGrid">
+    <div class="modalImg" id="qmImg"></div>
+    <div class="modalBody">
+      <div class="modalTop">
+        <div>
+          <div class="smallNote">Quick view</div>
+          <h3 class="title" id="qmTitle" style="font-size:20px;margin:6px 0 0;"></h3>
+        </div>
+        <button class="x" id="qmClose" aria-label="Close">×</button>
+      </div>
+      <p class="desc" id="qmDesc" style="min-height:auto;"></p>
+      <div class="row" style="margin-top:12px;">
+        <div class="price" id="qmPrice" style="font-size:18px;"></div>
+        <button class="btn btn--primary" id="qmAdd" type="button">Add to cart</button>
+      </div>
+      <div class="rule"></div>
+      <a class="btn" id="qmView" href="/product">View details</a>
+    </div>
+  </div>
+</div>
+
+<main class="page">
+  <section class="hero">
+    <div class="container heroGrid">
+      <div class="heroCard">
+        <p class="kicker">Family run since 1898 • Aberdeen (Cults), Scotland</p>
+        <h1>Modern toys. Classic service.</h1>
+        <p>A clean, modern storefront concept for Will’s Toy Shop — built for easy browsing, fast checkout, and simple product management.</p>
+        <div class="heroActions">
+          <button class="btn btn--primary" id="ctaShop" type="button">Shop now</button>
+          <a class="btn" href="/store.html">Visit the store</a>
+        </div>
+        <div class="trustRow">
+          <span class="trust">Free UK delivery over £50</span>
+          <span class="trust">Click & Collect</span>
+          <span class="trust">Trusted brands</span>
+        </div>
+      </div>
+      <div class="sidePromo">
+        <div class="promo">
+          <p class="promoTitle">This week’s picks</p>
+          <p class="promoText">Bestsellers, new arrivals, and simple gifts — without the clutter.</p>
+        </div>
+        <div class="promo">
+          <p class="promoTitle">Fast shopping experience</p>
+          <p class="promoText">Quick view, cart drawer, and clean product pages.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="sectionHead">
+        <h2>Featured</h2>
+        <p>Hand-picked highlights</p>
+      </div>
+      <div class="grid" id="featuredGrid"></div>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="container footerRow">
+    <div>© 2026 Will’s Toy Shop</div>
+    <div>Aberdeen (Cults) • Family run since 1898</div>
+  </div>
+</footer>
+<script src="/app.js"></script>
+</body>
+</html>
